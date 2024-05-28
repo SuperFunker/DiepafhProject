@@ -1,5 +1,5 @@
 body {
-    background-color: #4995fd;
+    background-color: #003a65;
 }
 
 div {
@@ -12,7 +12,7 @@ div {
 
 form {
   width: 30rem;
-  background-color: #6ec0e9;
+  background-color: #a0d0ec;
   box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   padding: 2rem;  
   font-family: Verdana, sans-serif;
@@ -31,12 +31,13 @@ label {
 }
 
 input[type="text"] {
+    text-align: center;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ddd;
   border-radius: 4px;
   box-sizing: border-box;
-  background-color: #a0d0ec;
+  background-color: #6ec0e9;
   outline: none;
   border: none;
 }
