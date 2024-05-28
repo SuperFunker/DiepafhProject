@@ -10,7 +10,13 @@ document
     const seatCount = parseInt(document.getElementById("ticketNumber").value);
     const messageDiv = document.getElementById("message");
     const nextButton = document.getElementById("next");
-    messageDiv.innerHTML = "Loading...";
+    messageDiv.innerHTML = "Loading...";    
+
+
+    if (nextButton.value == "Next")
+      {
+        window.location.href = "www.google.com";
+      }
 
     if (
       name == "" ||
@@ -47,7 +53,7 @@ document
           );
           return;
         }
-        createCompletion(messageDiv, nextButton);
+        formFilled = createCompletion(messageDiv, nextButton);
       });
     });
   });
@@ -60,9 +66,9 @@ function createError(error, messageDiv) {
 function createCompletion(messageDiv, nextButton) {
   messageDiv.innerHTML = "The Booking was succesfull";
   messageDiv.style.display = "block";
-  messageDiv.style.color = "green";
-  nextButton.type = "proceed";
+  messageDiv.style.color = "green";  
   nextButton.value = "Next";
+  return true;
 }
 
 function checkIfAdult(dob) {
