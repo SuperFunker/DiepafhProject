@@ -2,49 +2,87 @@ body {
   background-color: #f6f5f3;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0;
+  background-image: url(background.jpg);
+  background-size: cover;  
+  background-repeat: no-repeat;
 }
 
 .banner {
   background-color: #44a0d8;
   height: 4vh;
-  width: 100%;
+  width: 99.2vw;
   display: flex;
   justify-content: start;
   align-items: center;
   padding: 0.5rem;
   letter-spacing: 0.3rem;
+  font-family: Trebuchet, sans-serif;  
 }
 
 .form-container {
   background-color: #e4e6e5;
+  opacity: 98%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: Verdana, sans-serif;
-  margin: 15vh 35vw 0vh 35vw;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-top: 20vh;
+  width: 35rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
 
-#bookingForm {    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#bookingForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .booking-part {
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
+  padding: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+#dob {
+  width: 12.5rem;
 }
 
 input {
-    margin-top: 0.3rem;
-    margin-bottom: 1rem;
-    outline: none;
-    border: none;
-    border-radius: 0.2rem;
-    padding: 0.3rem;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  outline: none;
+  border: 0.1px solid lightgrey;
+  border-radius: 0.2rem;
+  padding: 0.4rem;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+}
+
+input:focus {
+  border-color: #44a0d8;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sumbit-button {
+  width: 5rem;
+  text-align: center;
+  border-radius: rem;
+  background-color: #44a0d8;
+  font-family: Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.sumbit-button:hover {
+    border: 0.1px solid black;
+    cursor: pointer;
 }

@@ -11,30 +11,34 @@
 
 <body>
     <div class="banner">
-        <h1>e-AirTicket</h1>
+        <h1>e-AirTicket<span>&#9992;</span></h1>
     </div>
     <div class="form-container">
         <form action="">
+            <h2>Ticket Booking</h2>
             <div id="bookingForm" action="">
-                <div class="booking-part">
-                    <h2>Ticket Booking</h2>
+                <div class="booking-part">                    
                     <label for="name">First Name:</label>
                     <input type="text" id="name" name="name">
                     <label for="surname">Last Name:</label>
                     <input type="text" id="surname" name="surname">
-                    <label for="dob">Date of Birth:</label>
+                    <label for="dob" id="dob">Date of Birth:</label>
                     <input type="date" id="dob" name="dob">
                 </div>
-                <div class="booking-part">
+                <div class="booking-part">                    
                     <label for="passportNumber">Passport Number</label>
                     <input type="text" id="passportNumber" name="passportNumber">
                     <label for="flightCode">Flight Number:</label>
                     <input type="text" id="flightCode" name="flightCode">
+                    <label for="ticketNumber">Passengers:</label>
+                    <input type="number" id="flightCode" name="flightCode">
                 </div>
             </div>
-        </form>
-        <h3>Number Of Available Seats</h3>
-        <input class="sumbit-button" type="submit" value="Sumbit">
+            <div class="buttons">
+                <input class="sumbit-button" type="exit" value="Exit">
+                <input class="sumbit-button" type="submit" value="Next">
+            </div>            
+        </form>         
     </div>
 </body>
 
