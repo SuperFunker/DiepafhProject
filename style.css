@@ -7,9 +7,13 @@ body {
 
 .banner {
   background-color: #44a0d8;
-
-  height: 10vh;
+  height: 4vh;
   width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0.5rem;
+  letter-spacing: 0.3rem;
 }
 
 .form-container {
@@ -18,7 +22,29 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: Verdana, sans-serif;
+  margin: 15vh 35vw 0vh 35vw;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 
-  margin: 25vh 35vw 0vh 35vw;
-  /* height: 70vh; */
+#bookingForm {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.booking-part {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+input {
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.3rem;
 }
