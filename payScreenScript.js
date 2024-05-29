@@ -1,6 +1,7 @@
 const messageDiv = document.getElementById("message");
 const nextButton = document.getElementById("next");
 var registrationNumber;
+var payment = 0;
 
 function togglePayment(toggle) {
   const divs = document.querySelectorAll(".booking-part");
@@ -17,11 +18,16 @@ function togglePayment(toggle) {
     resDiv.style.display = "block";
   }
 }
+function getRandomPrice(min, max) {
+  return parseFloat((Math.random() * (max - min) + min).toFixed(2));
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   registrationNumber = getQueryVariable("variable");
+  payment = getRandomPrice(80, 330);
   document.getElementById("resNum").value = registrationNumber;
   togglePayment(false);
+
   function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
     var vars = query.split("&");
@@ -40,13 +46,16 @@ document
   .addEventListener("submit", function (event) {
     event.preventDefault();
     const resNumber = document.getElementById("resNum").value;
+    const amount = document.getElementById("amount");
+
+    amount.placeholder = payment;
     messageDiv.innerHTML = "Loading...";
 
     if (nextButton.value == "Sumbit") {
       const cardNumber = document.getElementById("cardNumber").value;
       const mobileNumber = document.getElementById("mobile").value;
 
-      if (cardNumber == "" || mobileNumber == "") {
+      if (cardNumber == "" || mobileNumber == "" || amount.value == "") {
         createError("Please Complete All Fields.", messageDiv);
         return;
       }
@@ -56,7 +65,11 @@ document
           return;
         }
         if (mobileNumber.toString().length != 10) {
-            createError("The Mobile Phone provided is not correct",messageDiv)
+          createError("The Mobile Phone provided is not correct", messageDiv);
+          return;
+        }        
+        if (amount.value != payment) {
+            createError("The Payment Amount provided is not correct", messageDiv);
             return;
         }
         createSuccess("Reservation Payment Successfull", messageDiv);
@@ -71,7 +84,7 @@ document
       nextButton.value = "Sumbit";
       nextButton.style.width = "5rem";
       const price = document.getElementById("price");
-      price.innerHTML = "<h3>Price: " + getRandomPrice(80, 330) +"&#8364;</h>";
+      price.innerHTML = "<h3>Price: " + payment + "&#8364;</h>";
       return;
     }
 
@@ -112,8 +125,5 @@ document
           resolve(cardValid);
         }, 1000);
       });
-    }
-    function getRandomPrice(min, max) {
-        return parseFloat((Math.random() * (max - min) + min).toFixed(2));
     }
   });

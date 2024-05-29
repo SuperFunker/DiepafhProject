@@ -67,7 +67,7 @@ function createError(error, messageDiv) {
 function createCompletion(messageDiv, nextButton) {
   bookingNumber = getRandomRegistrationNumber();  
   localStorage.setItem("bookNum",bookingNumber);
-  messageDiv.innerHTML = "The Booking was succesfull <br><br> Reservation Number : <br>" + bookingNumber;
+  messageDiv.innerHTML = "The Booking was succesfull <br><br> Reservation Number : <br><b>" + bookingNumber + "</b>";
   messageDiv.style.display = "block";
   messageDiv.style.color = "green";  
   nextButton.value = "Next";  
@@ -90,7 +90,7 @@ function checkIfAdult(dob) {
 function checkSeatAvailability(flightCode, seatCount) {
   return new Promise((resolve) => {
     setTimeout(() => {
-      const availableSeats = 100;
+      const availableSeats = 4;
       resolve(seatCount <= availableSeats);
     }, 1000);
   });
