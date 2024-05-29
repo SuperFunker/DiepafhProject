@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Check-In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="banner">
+        <div onclick="window.location.href='index.html'"
+        style="cursor: pointer;">
+            <h1>e-AirTicket<span>&#9992;</span></h1>
+        </div>
+    </div>
+    <div class="form-container">
+        <form id="bookingForm" action="">
+            <h2>Check-In</h2>
+            <div class="bookingForm">
+                <div id="res-div">
+                    <label for="resNumber">Check-In Number:</label>
+                    <input type="number" id="resNum" name="resNumber">
+                </div>                
+                <div class="booking-part" style="text-align: center;">
+                    <label for="">Choose Seats?</label>
+                    <br>
+                    <select id="seats" name="seats">
+                        <option value="random">Random</option>
+                        <option value="A12">A12</option>
+                        <option value="premium-economy">C4</option>
+                        <option value="business">D22</option>
+                        <option value="first-class">E9</option>
+                    </select>
+                </div>
+            </div>
+            <div id="message"></div>
+            <div class="buttons">
+                <input onclick="window.location.href='index.html'" class="sumbit-button" type="button" value="Exit">
+                <input id="next" class="sumbit-button" type="submit" value="Check">
+            </div>
+        </form>
+    </div>
+</body>
+<script src="checkinScreen.js"></script>
+
+</html>

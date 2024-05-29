@@ -67,7 +67,7 @@ function createError(error, messageDiv) {
 function createCompletion(messageDiv, nextButton) {
   bookingNumber = getRandomRegistrationNumber();  
   localStorage.setItem("bookNum",bookingNumber);
-  messageDiv.innerHTML = "The Booking was succesfull <br><br> Reservation Number : <br><b>" + bookingNumber + "</b>";
+  messageDiv.innerHTML = "The Booking was succesfull <br><br> Reservation Number: <br><b>" + bookingNumber + "</b>";
   messageDiv.style.display = "block";
   messageDiv.style.color = "green";  
   nextButton.value = "Next";  
