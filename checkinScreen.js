@@ -75,9 +75,6 @@ document
       }
     }
 
-    function getRandomCheckinNumber() {
-      return Math.floor(100000 + Math.random() * 900000);
-    }
     function createError(error, messageDiv) {
       messageDiv.innerHTML = error;
       messageDiv.style.display = "block";
@@ -96,14 +93,5 @@ document
           resolve(resValid);
         }, 1000);
       });
-    }
-    function checkCard(cardNumber) {
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          //hardcoded
-          const cardValid = cardNumber.toString().length != 16 ? false : true;
-          resolve(cardValid);
-        }, 1000);
-      });
-    }
+    }    
   });
