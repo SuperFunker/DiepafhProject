@@ -64,11 +64,17 @@ function createError(error, messageDiv) {
   messageDiv.style.color = "red";
 }
 function createCompletion(messageDiv, nextButton) {
-  messageDiv.innerHTML = "The Booking was succesfull";
+  var generatedNumber = getRandomRegistrationNumber();
+  localStorage.setItem("bookingNumber", generatedNumber);
+  messageDiv.innerHTML = "The Booking was succesfull <br><br> Reservation Number : <br>" + generatedNumber;
   messageDiv.style.display = "block";
   messageDiv.style.color = "green";  
   nextButton.value = "Next";
   return true;
+}
+
+function getRandomRegistrationNumber() {
+  return Math.floor(100000 + Math.random() * 900000);
 }
 
 function checkIfAdult(dob) {
