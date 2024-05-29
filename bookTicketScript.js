@@ -9,13 +9,14 @@ document
     const flightCode = document.getElementById("flightCode").value;
     const seatCount = parseInt(document.getElementById("ticketNumber").value);
     const messageDiv = document.getElementById("message");
-    const nextButton = document.getElementById("next");
+    const nextButton = document.getElementById("next");    
     messageDiv.innerHTML = "Loading...";    
 
 
     if (nextButton.value == "Next")
       {
-        window.location.href = "www.google.com";
+        window.location.href = "/payScreen.html?variable=" + encodeURIComponent(localStorage.getItem("bookNum"));
+        return;
       }
 
     if (
@@ -53,7 +54,7 @@ document
           );
           return;
         }
-        formFilled = createCompletion(messageDiv, nextButton);
+        createCompletion(messageDiv, nextButton);
       });
     });
   });
@@ -64,13 +65,12 @@ function createError(error, messageDiv) {
   messageDiv.style.color = "red";
 }
 function createCompletion(messageDiv, nextButton) {
-  var generatedNumber = getRandomRegistrationNumber();
-  localStorage.setItem("bookingNumber", generatedNumber);
-  messageDiv.innerHTML = "The Booking was succesfull <br><br> Reservation Number : <br>" + generatedNumber;
+  bookingNumber = getRandomRegistrationNumber();  
+  localStorage.setItem("bookNum",bookingNumber);
+  messageDiv.innerHTML = "The Booking was succesfull <br><br> Reservation Number : <br>" + bookingNumber;
   messageDiv.style.display = "block";
   messageDiv.style.color = "green";  
-  nextButton.value = "Next";
-  return true;
+  nextButton.value = "Next";  
 }
 
 function getRandomRegistrationNumber() {

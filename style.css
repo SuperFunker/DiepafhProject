@@ -6,7 +6,7 @@ body {
   align-items: center;
   margin: 0;
   background-image: url(assets/background.jpg);
-  background-size: cover;  
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -19,7 +19,7 @@ body {
   align-items: center;
   padding: 0.5rem;
   letter-spacing: 0.3rem;
-  font-family: Trebuchet, sans-serif;  
+  font-family: Trebuchet, sans-serif;
 }
 
 .form-container {
@@ -32,6 +32,7 @@ body {
   font-family: Verdana, sans-serif;
   margin-top: 20vh;
   width: 35rem;
+  padding: 0.8rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
 
@@ -70,12 +71,12 @@ input:focus {
 .buttons {
   display: flex;
   justify-content: space-between;
-  align-items: center;  
+  align-items: center;
 }
 
-.sumbit-button {    
+.sumbit-button {
   width: 5rem;
-  text-align: center;  
+  text-align: center;
   background-color: #44a0d8;
   font-family: Verdana, sans-serif;
   font-weight: bold;
@@ -83,13 +84,27 @@ input:focus {
 }
 
 .sumbit-button:hover {
-    border: 0.1px solid black;
-    cursor: pointer;
+  border: 0.1px solid black;
+  cursor: pointer;
 }
 
 #message {
-    display: none;
-    text-align: center;    
-    font-weight: bold;    
-    padding-bottom: 2rem;
+  display: none;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 2rem;
+}
+
+#price {
+  margin-left: 0.5rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
