@@ -1,11 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ticket Booking</title>
+    <link rel="stylesheet" href="style.css">    
 </head>
+
 <body>
-    <h1>Homepage</h1>
+    <div class="banner">
+        <div onclick="window.location.href='index.html'"
+        style="cursor: pointer;">
+            <h1>e-AirTicket<span>&#9992;</span></h1>
+        </div>
+    </div>
+    <div class="home-container">
+        <h2>Welcome to e-AirTicket</h2>
+        <p>Your one-stop solution for booking flights quickly and easily.</p>                
+    </div>
+    <div class="form-container">
+        <form id="bookingForm" action="">
+            <h2>Ticket Booking</h2>
+            <div class="bookingForm">
+                <div class="booking-part">                    
+                    <label for="name">First Name:</label>
+                    <input type="text" id="name" name="name">
+                    <label for="surname">Last Name:</label>
+                    <input type="text" id="surname" name="surname">
+                    <label for="dob" id="dob-label">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+                <div class="booking-part">                    
+                    <label for="passportNumber">Passport Number</label>
+                    <input type="text" id="passportNumber" name="passportNumber">
+                    <label for="flightCode">Flight Number:</label>
+                    <input type="text" id="flightCode" name="flightCode">
+                    <label for="ticketNumber">Passengers:</label>
+                    <input type="number" id="ticketNumber" name="flightCode">
+                </div>
+            </div>
+            <div id="message"></div>
+            <div class="buttons">
+                <input style="visibility: hidden;" class="sumbit-button" type="button" value="Exit">
+                <input id="next" class="sumbit-button" type="submit" value="Check">
+            </div>            
+        </form>         
+    </div>
 </body>
+<script src="bookTicketScript.js"></script>
 </html>

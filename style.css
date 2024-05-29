@@ -30,8 +30,22 @@ body {
   justify-content: center;
   align-items: center;
   font-family: Verdana, sans-serif;
-  margin-top: 20vh;
+  margin-top: 10vh;
   width: 35rem;
+  padding: 0.8rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.home-container {
+  background-color: #e4e6e5;
+  opacity: 98%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, sans-serif;
+  margin-top: 5vh;
+  width: 70rem;
   padding: 0.8rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
@@ -68,6 +82,15 @@ input:focus {
   border-color: #44a0d8;
 }
 
+select {
+  text-align: center;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  width: 15rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
 .buttons {
   display: flex;
   justify-content: space-between;
@@ -91,8 +114,10 @@ input:focus {
 #message {
   display: none;
   text-align: center;
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-style: italic;
   padding-bottom: 2rem;
+  font-family: Verdana, sans-serif;
 }
 
 #price {
