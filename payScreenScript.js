@@ -108,7 +108,7 @@ document
       return new Promise((resolve) => {
         setTimeout(() => {
           //hardcoded
-          const cardValid = cardNumber.toString().length != 12 ? false : true;
+          const cardValid = cardNumber.toString().length != 16 ? false : true;
           resolve(cardValid);
         }, 1000);
       });
