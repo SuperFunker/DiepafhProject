@@ -15,7 +15,7 @@ document
 
     if (nextButton.value == "Next")
       {
-        window.location.href = "/payScreen.html?variable=" + encodeURIComponent(localStorage.getItem("bookNum"));
+        window.location.href = "payScreen.html?variable=" + encodeURIComponent(localStorage.getItem("bookNum"));
         return;
       }
 
