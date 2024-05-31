@@ -53,7 +53,7 @@ document
 
     if (nextButton.value == "Next") {
       window.location.href =
-        "/checkinScreen.html?variable=" +
+        "checkinScreen.html?variable=" +
         encodeURIComponent(localStorage.getItem("checkNum"));
       return;
     }

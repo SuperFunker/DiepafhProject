@@ -45,7 +45,7 @@ document
 
     if (nextButton.value == "Finish") {
       window.location.href =
-        "/index.html?variable=" +
+        "index.html?variable=" +
         encodeURIComponent(localStorage.getItem("checkNum"));
       return;
     }
